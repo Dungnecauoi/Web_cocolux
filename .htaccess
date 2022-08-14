@@ -1,0 +1,14 @@
+RewriteEngine On 
+RewriteRule ^trang-chu$ index.php
+RewriteRule ^tin-tuc$ index.php?controller=news
+RewriteRule ^danh-muc/(.*)/(.*)$ index.php?controller=products&action=category&id=$2
+RewriteRule ^san-pham/(.*)/(.*)$ index.php?controller=products&action=detail&id=$2
+RewriteRule ^dang-nhap$ index.php?controller=account&action=login
+RewriteRule ^dang-ky$ index.php?controller=account&action=register
+RewriteRule ^tin-tuc/(.*)/(.*)$ index.php?controller=news&action=detail&id=$2
+RewriteRule ^thuong-hieu/(.*)/(.*)$ index.php?controller=products&action=brand&id=$2
+RewriteRule ^san-pham-hot$ index.php?controller=products&action=hotProducts
+RewriteRule ^cart$ index.php?controller=cart
+RewriteRule ^cart/(.*)$ index.php?controller=cart&action=create&id=$1
+RewriteRule ^cartpay$ index.php?controller=cart&action=cartPayView
+RewriteRule ^cart.$ index.php?controller=cart&notify=error-no-product
